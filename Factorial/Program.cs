@@ -12,7 +12,7 @@ namespace Factorial
         {
             Console.WriteLine("Please select a number.");
             int n = int.Parse(Console.ReadLine());
-            Console.WriteLine(RecursiveFactorial(n));
+            Console.WriteLine("The factorial of " + n + " is " + RecursiveFactorial(n) + ".");
             Console.ReadLine();
         }
         static int LoopingFactorial(int n)
@@ -26,10 +26,9 @@ namespace Factorial
         }
         static int RecursiveFactorial(int n)
         {
-            if (n == 0)
-            {
+            if (n == 1)
                 return 1;
-            }
+            else
             return n * RecursiveFactorial(n - 1);
         }
     }
